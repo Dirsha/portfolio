@@ -1,0 +1,106 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+a {
+  text-decoration: none;
+}
+a:active,
+a:hover {
+  text-decoration: none;
+  color: #667;
+}
+
+button {
+  outline: none;
+  cursor: pointer;
+}
+.wrapper {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  background-color: #f7f5f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card {
+  width: 320px;
+  height: 350px;
+  position: relative;
+  perspective: 1000px;
+  border-radius: 10px;
+  background-color: #f7f5f5;
+}
+.card__item__text {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.card__front,
+.card__back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 1s;
+  backface-visibility: hidden;
+  border-radius: 10px;
+}
+
+.card__back {
+  background-color: #fcdb00;
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.card:hover .card__front {
+  transform: rotateY(180deg);
+}
+.card:hover .card__back {
+  transform: rotateY(360deg);
+}
+.card__front__image {
+  height: 100%;
+  width: 100%;
+  border-radius: 5px;
+}
+.card__back__btn {
+  text-align: center;
+  color: black;
+  width: 90%;
+
+  border-radius: 5px;
+  padding: 5px;
+}
+.card__back__btn--tinyone {
+  background-color: black;
+  color: #fcdb00;
+}
+.card__back__btn--tinyone:hover {
+  color: #fcdb00;
+}
+.card__back--logistic {
+  background-color: #f1f1f3;
+}
+
+.card__back__logo--logistic {
+  width: 80%;
+}
+.card__item__text--logistic {
+  color: #102e62;
+}
+.card__back__btn--logistic {
+  background-color: #102e62;
+  color: #f1f1f3;
+}
+.card__back__btn--logistic:hover {
+  color: #f1f1f3;
+}
